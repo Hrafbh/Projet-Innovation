@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecommande</title>
+    <link rel="stylesheet" href="telecommande.css"> 
+    
+</head>
+<body style="background-color: #042c3c;">
+    <center>
+        
+        <h1 id ="titre" style="color: white">Mode Texte + Chronomètre :</h1>
+        <p id="taille" style = "color : white ; padding : 5">
+            Taille du texte : 
+        </p>
+        <p id="vitesse" style = "color : white ; padding : 5">
+            Vitesse de défilement : 
+        </p>
+        <input type="range" min="30" max="100" id="slidertaille"
+			onchange="sliderTailleTexte()" value="40" />
+
+        <br /><br />
+        <input type="range" min="0" max="200" id="slidervitesse"
+        onchange="sliderVitesse()" value="100" />
+        <br /><br />
+        <input type="file" id="fileInput">
+        <textarea  style="padding: 100px; margin: 50px;
+        font-size: 20px; border: 5px solid rgba(9, 29, 9, 0.377);"
+         class="container" type="text" id="champtexte" name="fname" placeholder="Ecrire votre texte à défiler ici..."></textarea>
+         <button id="chargertexte"><span></span> Charger le texte</button>
+         <button id="demarrerdefilement"   class="button" onclick = "demarrer()"><span></span>Démarrer</button>
+         <button id="arreterdefilement"  class="button" onclick = "arreter()"><span></span>Arreter</button>
+         <button id="remettreazero"  class="button" onclick = "reset()"><span></span>Remise à zéro</button>
+         <h1 id="wrapper">
+            <span class ="colock" id="chrono">00:00:00</span>
+         </h1>
+         <img src="https://attachments.office.net/owa/ACHRAF.BAHICH%40centrale-casablanca.ma/service.svc/s/GetAttachmentThumbnail?id=AAMkADI5OWQxNDNlLWEwYzItNGEyZi1iMzZlLTNjMDY0N2U5YTljOABGAAAAAADshACK1DnPS7KFi16j1ZpxBwAXGXgUipQaQKFBnxtDnw5KAAAAAAEJAAAXGXgUipQaQKFBnxtDnw5KAAE33wTOAAABEgAQAI4Z62ZErJRBr%2FRXJn5S%2FIE%3D&thumbnailType=2&token=eyJhbGciOiJSUzI1NiIsImtpZCI6IkQ4OThGN0RDMjk2ODQ1MDk1RUUwREZGQ0MzODBBOTM5NjUwNDNFNjQiLCJ0eXAiOiJKV1QiLCJ4NXQiOiIySmozM0Nsb1JRbGU0Tl84dzRDcE9XVUVQbVEifQ.eyJvcmlnaW4iOiJodHRwczovL291dGxvb2sub2ZmaWNlLmNvbSIsInVjIjoiYTJmNDI3ZTAxOTAzNDZmOTliZjg1YzljMDUwOTAxZDIiLCJzaWduaW5fc3RhdGUiOiJbXCJrbXNpXCJdIiwidmVyIjoiRXhjaGFuZ2UuQ2FsbGJhY2suVjEiLCJhcHBjdHhzZW5kZXIiOiJPd2FEb3dubG9hZEA3YTgzNWY3OC1iNjVmLTQ5NWMtOTVkOC0xMjIzOGMzOTNkN2EiLCJpc3NyaW5nIjoiV1ciLCJhcHBjdHgiOiJ7XCJtc2V4Y2hwcm90XCI6XCJvd2FcIixcInB1aWRcIjpcIjExNTM4MDExMjAyMDcxMTM4MzZcIixcInNjb3BlXCI6XCJPd2FEb3dubG9hZFwiLFwib2lkXCI6XCIwZjgxMDVjMS1iNmZjLTQwZGMtYTlkOC0xYTFlNTU3YzQzNmFcIixcInByaW1hcnlzaWRcIjpcIlMtMS01LTIxLTM4MDUxMzQwOTUtMTExMzY1OTI2MC0yNTcyNjAzMDkyLTI5ODM4NzVcIn0iLCJuYmYiOjE2NzE0MTUzODksImV4cCI6MTY3MTQxNTk4OSwiaXNzIjoiMDAwMDAwMDItMDAwMC0wZmYxLWNlMDAtMDAwMDAwMDAwMDAwQDdhODM1Zjc4LWI2NWYtNDk1Yy05NWQ4LTEyMjM4YzM5M2Q3YSIsImF1ZCI6IjAwMDAwMDAyLTAwMDAtMGZmMS1jZTAwLTAwMDAwMDAwMDAwMC9hdHRhY2htZW50cy5vZmZpY2UubmV0QDdhODM1Zjc4LWI2NWYtNDk1Yy05NWQ4LTEyMjM4YzM5M2Q3YSIsImhhcHAiOiJvd2EifQ.H9R-NCegIK5B-ycsUz8xM5yPH9TlZoY9DOuPz_M_dL1HRTAenapzFaRRCUWWquvB-BOdPRwmHHpd5D0lPQTufuIEw6QL0Jb8F3suztpDOqbM-4apgVdHrp7MFnK4Pbog6g_Az4iLRdFB1muU0m060lVQdzOEE4Va_pei_mAAs9OdCKIS1WTe8gh_GOJDAkFvJuJO8pn9509xJP9K-i-QkfQ1F_KdVONEvkYMA5VWfamQaj2h1Fxd9KL52jAqjge4P6txzSbBRmCx1JyUzLRZNv0VGdPUBTNBaInrKS58_XfWv9p4ttgoIKpXjMHIOotkc-1sI949KN-jOT5Y34JA9g&X-OWA-CANARY=jqv013Djx0CM85BJGLTV7_Az9Zll4doYbjBelyoOl9nN6NPozRWa4kkngq3ExEjsL2HnLM-Xnm4.&owa=outlook.office.com&scriptVer=20221209009.09&animation=true" alt="ecc" width="70" height="70"> 
+    </center>
+        
+        
+        <script src="telecommande.js"></script>
+        
+        <script>
+            const fileInput = document.getElementById('fileInput');
+            const textarea = document.getElementById('champtexte');
+        
+            fileInput.addEventListener('change', (event) => {
+               const file = event.target.files[0];
+        
+               const reader = new FileReader();
+                 reader.onload = (event) => {
+                   textarea.value = event.target.result;
+                 };
+                 reader.readAsText(file);
+        });
+        </script>
+
+
+</body>
+</html>
+
+
+
