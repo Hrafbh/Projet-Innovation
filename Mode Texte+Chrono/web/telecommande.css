@@ -1,0 +1,157 @@
+#chargertexte {
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    right : 20px;
+    top : 300px;
+    
+}
+#demarrerdefilement{
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 20px;
+    top : 200px;
+}
+#arreterdefilement{
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 20px;
+    top : 300px;
+}
+#remettreazero{
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 20px;
+    top : 400px;
+}
+#fileInput{
+    width : 300px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 30%;
+    bottom: 70px
+}
+#slidertaille{
+    position : absolute;
+    left: 50%;
+    top : 130px;
+}
+#slidervitesse{
+    position : absolute;
+    left: 50%;
+    top : 150px;
+}
+
+#titre{
+    position: absolute;
+    top : 20px;
+    left: 25%
+}
+#taille{
+    position: absolute;
+    width : 200px;
+    left: 25%;
+    top : 130px;
+   
+}
+#vitesse{
+    position: absolute;
+    width : 200px;
+    left: 25%;
+    top : 150px;
+    
+
+}
+textarea{
+    position:absolute;
+    left : 140px;
+    right :140px;
+    top:180px;
+    bottom: 140px;
+}
+span{
+    background: #5c54a4;
+   
+    border-radius: 25px;
+    position: absolute;
+    left : 140px;
+    right :140px;
+    bottom: 0;
+    z-index:1;
+}  
+button:hover span{
+    width:100%;
+}
+button:hover{
+    border: none;
+}
+
+
+h1{
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+header h1 span.clock {
+    color: #fff;
+    padding-left: 10px;
+}
+img{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
