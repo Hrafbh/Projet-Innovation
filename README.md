@@ -11,6 +11,9 @@ Mode Texte + Chrono :
 Telecommande : http://localhost:8080/telecommande.htm
 Prompteur : http://localhost:8080/prompteur.htm
 
-NB: Before runing the code in the code editor , excute in the terminal "npm init" and install (express , websocket , ws )
-    To run the code , you should excute in the terminal : "node index.js"
+
+
+NB: 
+1-Before runing the code in the code editor , excute in the terminal "npm init" and install (express , websocket , ws )
+2-To run the code , you should excute in the terminal : "node index.js"
     
