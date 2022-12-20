@@ -1,0 +1,97 @@
+
+#demarrerdefilement{
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 420px;
+    top : 400px;
+}
+#arreterdefilement{
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 220px;
+    top : 400px;
+}
+#remettreazero{
+    width : 150px;
+    padding: 15px 0;
+    text-align: center; 
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #5c54a4;
+    background: #ffca40;
+    color:#042c3c;
+    cursor: pointer;
+    position: absolute;
+    overflow:hidden;
+    left : 20px;
+    top : 400px;
+}
+
+
+#titre{
+    position: absolute;
+    top : 20px;
+    left: 25%
+}
+
+
+
+span{
+    background: #5c54a4;
+   
+    border-radius: 25px;
+    position: absolute;
+    left : 140px;
+    right :140px;
+    bottom: 0;
+    z-index:1;
+}  
+button:hover span{
+    width:100%;
+}
+button:hover{
+    border: none;
+}
+
+
+h1{
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+header h1 span.clock {
+    color: #fff;
+    padding-left: 10px;
+}
+img{
+    position:absolute;
+    top:10px;
+    right:10px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
